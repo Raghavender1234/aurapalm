@@ -1,5 +1,5 @@
 # Web Framework
-Flask==2.3.2
+Flask[async]==2.3.2 # <-- CHANGE THIS LINE
 Flask-Cors==4.0.0
 
 # Environment variables
