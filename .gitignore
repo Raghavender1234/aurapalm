@@ -1,0 +1,33 @@
+# Environment variables
+.env
+.flaskenv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+.tox/
+dist/
+build/
+*.so
+*.dll
+*.dylib
+
+# Temporary PDF Reports
+temp_reports/
+*.pdf
+
+# IDEs and OS files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store # macOS
+Thumbs.db # Windows

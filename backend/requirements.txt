@@ -1,0 +1,21 @@
+# Web Framework
+Flask==2.3.2
+Flask-Cors==4.0.0
+
+# Environment variables
+python-dotenv==1.0.0
+
+# OpenAI API client
+openai==1.17.0
+
+# Razorpay Python client - UPDATED LINE
+razorpay
+
+# PDF Generation (HTML to PDF)
+WeasyPrint==61.0
+
+# Gunicorn (Production WSGI server for Flask)
+gunicorn==22.0.0
+
+# Pillow for image processing (optional, but good practice)
+Pillow==10.3.0

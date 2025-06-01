@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraPalm.in - Personalized AI Palmistry & Numerology Reports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AuraPalm.in - Personalized AI Palmistry & Numerology Reports",
+      "description": "Unlock your destiny with personalized AI palmistry and numerology reports from AuraPalm.in. Get deep insights into your life path, career, relationships, and couple compatibility.",
+      "serviceType": ["Palm Reading", "Numerology", "Couple Compatibility Analysis"],
+      "areaServed": {
+        "@type": "Place",
+        "name": "India"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "AuraPalm.in"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Individual Basic Report",
+          "priceCurrency": "INR",
+          "price": "50",
+          "category": "Individual Report",
+          "description": "Concise palm & numerology insights."
+        },
+        {
+          "@type": "Offer",
+          "name": "Individual Premium Report",
+          "priceCurrency": "INR",
+          "price": "150",
+          "category": "Individual Report",
+          "description": "Detailed, multi-page analysis (career, relationships, year forecast)."
+        },
+        {
+          "@type": "Offer",
+          "name": "Couple Premium Report",
+          "priceCurrency": "INR",
+          "price": "250",
+          "category": "Couple Report",
+          "description": "Comprehensive joint analysis for partners (individual insights + relationship compatibility, combined path, challenges, shared future outlook)."
+        }
+      ],
+      "url": "https://aurapalm.in"
+    }
+    </script>
+    <style>
+        body {
+            background-image: url('images/image1.jpeg'); /* Mystical Palm Reading Background */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat;
+            background-attachment: scroll; /* Keep the background fixed during scrolling */
+            background-color: #f0f2f5; /* Fallback background color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .numerology-section {
+            background-image: url('images/image2.jpeg'); /* Numerology Chart Background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: white; /* Adjust text color for better visibility on the background */
+        }
+
+        .container {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the container */
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        /* Optional: Custom styling for form elements */
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <header class="text-center mb-4">
+            <h1 class="display-4">AuraPalm.in</h1>
+            <p class="lead">Unlock insights from your hands and destiny's numbers.</p>
+        </header>
+
+        <div class="card p-4 shadow-sm">
+            <h2 class="card-title text-center mb-4">Get Your Personalized Report</h2>
+            <form id="reportForm">
+
+                <div class="mb-4">
+                    <label class="form-label">Select Report Type:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reportOption" id="individualReport" value="individual" checked>
+                        <label class="form-check-label" for="individualReport">
+                            Individual Report
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reportOption" id="coupleReport" value="couple">
+                        <label class="form-check-label" for="coupleReport">
+                            Couple Report
+                        </label>
+                    </div>
+                </div>
+
+                <div id="individualSection">
+                    <h3>Your Details</h3>
+                    <div class="mb-3">
+                        <label for="fullName1" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="fullName1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob1" class="form-label">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dob1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender1" class="form-label">Gender:</label>
+                        <select class="form-select" id="gender1" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="leftPalm1" class="form-label">Upload Left Palm Photo:</label>
+                        <input type="file" class="form-control" id="leftPalm1" accept="image/*" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rightPalm1" class="form-label">Upload Right Palm Photo:</label>
+                        <input type="file" class="form-control" id="rightPalm1" accept="image/*" required>
+                    </div>
+
+                    <div class="mb-4" id="individualReportTypeRadios">
+                        <label class="form-label">Individual Report Type:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="individualReportType" id="basicReport" value="basic" checked>
+                            <label class="form-check-label" for="basicReport">
+                                Basic Report (₹50) - Concise insights.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="individualReportType" id="premiumReport" value="premium">
+                            <label class="form-check-label" for="premiumReport">
+                                Premium Report (₹150) - Detailed, multi-page analysis.
+                            </label>
+                        </div>
+                    </div>
+                </div> <div id="coupleSection" class="d-none">
+                    <hr class="my-4">
+                    <h3>Partner 1 Details</h3>
+                    <div class="mb-3">
+                        <label for="fullNameP1" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="fullNameP1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dobP1" class="form-label">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dobP1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="genderP1" class="form-label">Gender:</label>
+                        <select class="form-select" id="genderP1">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="leftPalmP1" class="form-label">Upload Partner 1 Left Palm Photo:</label>
+                        <input type="file" class="form-control" id="leftPalmP1" accept="image/*">
+                    </div>
+                    <div class="mb-3">
+                        <label for="rightPalmP1" class="form-label">Upload Partner 1 Right Palm Photo:</label>
+                        <input type="file" class="form-control" id="rightPalmP1" accept="image/*">
+                    </div>
+
+                    <hr class="my-4">
+                    <h3>Partner 2 Details</h3>
+                    <div class="mb-3">
+                        <label for="fullNameP2" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="fullNameP2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dobP2" class="form-label">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dobP2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="genderP2" class="form-label">Gender:</label>
+                        <select class="form-select" id="genderP2">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="leftPalmP2" class="form-label">Upload Partner 2 Left Palm Photo:</label>
+                        <input type="file" class="form-control" id="leftPalmP2" accept="image/*">
+                    </div>
+                    <div class="mb-3">
+                        <label for="rightPalmP2" class="form-label">Upload Partner 2 Right Palm Photo:</label>
+                        <input type="file" class="form-control" id="rightPalmP2" accept="image/*">
+                    </div>
+                </div> <div class="mb-3">
+                    <label for="language" class="form-label">Report Language:</label>
+                    <select class="form-select" id="language" required>
+                        <option value="en">English</option>
+                        <option value="hi">Hindi (हिंदी)</option>
+                        <option value="es">Spanish (Español)</option>
+                        </select>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Proceed to Payment (<span id="paymentAmount">₹50</span>)</button>
+                    <div id="loadingSpinner" class="text-center mt-3 d-none">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Generating your personalized report. This may take a moment...</p>
+                    </div>
+                    <div id="errorMessage" class="alert alert-danger mt-3 d-none" role="alert"></div>
+                </div>
+            </form>
+        </div>
+
+        <div class="numerology-section">
+            <h2>Explore the Power of Numerology</h2>
+            <p>Discover the hidden meanings behind your birth date and name. Our numerology reports provide deep insights into your life path, destiny, and relationships.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
