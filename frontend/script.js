@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Make sure this matches your Flask backend URL.
     // When deploying, this will need to be the deployed backend URL (e.g., 'https://api.aurapalm.in').
-    const BACKEND_URL = 'http://127.0.0.1:5000'; // For local development
+    const BACKEND_URL = 'https://aurapalm.onrender.com'; // For local development
 
     const PRICES = {
         individual_basic: 50,
